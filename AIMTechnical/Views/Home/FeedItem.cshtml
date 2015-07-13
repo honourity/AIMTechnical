@@ -1,0 +1,61 @@
+﻿@model AIMTechnical.Models.onAirPlayoutItem
+
+@if (Model.artist != null)
+{
+    <div class="item-property col-sm-6">
+        <label>@Html.LabelFor(m => m.artist):</label> @Model.artist.ToString()
+    </div>
+}
+
+@if (Model.title != null)
+{
+    <div class="item-property col-sm-6">
+        <label>@Html.LabelFor(m => m.title):</label> @Model.title.ToString()
+    </div>
+}
+
+@if (Model.status != null)
+{
+    <div class="item-property col-sm-6">
+        <label>@Html.LabelFor(m => m.status):</label>
+        @if (Model.status.Equals("playing"))
+        {
+            <span class="@(XMlHelperClass.IsTimespanCurrent(Model.time, Model.duration) ? "status-valid" : "status-invalid")">
+                @Model.status.ToString()
+            </span>
+        }
+        else
+        {
+            @Model.status.ToString()
+        }
+    </div>
+}
+
+@if (Model.type != null)
+{
+    <div class="item-property col-sm-6">
+        <label>@Html.LabelFor(m => m.type):</label> @Model.type.ToString()
+    </div>
+}
+
+@if (Model.duration != DateTime.MinValue)
+{
+    <div class="item-property col-sm-6">
+        <label>@Html.LabelFor(m => m.duration):</label> @Model.duration.ToString("mm:ss")
+    </div>
+}
+
+@if (Model.time != DateTime.MinValue)
+{
+    <div class="item-property col-sm-6">
+        <label>@Html.LabelFor(m => m.time):</label> @Model.time.ToString()
+    </div>
+}
+
+@if (Model.imageUrl != null)
+{
+    <div class="item-property col-sm-12">
+        <label>@Html.LabelFor(m => m.imageUrl):</label>
+        <span class="@(XMlHelperClass.IsValidFilePath(Model.imageUrl) ? "" : "path-invalid")">@Model.imageUrl</span>
+    </div>
+}

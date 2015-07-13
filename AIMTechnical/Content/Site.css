@@ -1,0 +1,80 @@
+﻿body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Removing default style from lists */
+ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+li {
+    margin:0;
+    padding:0;
+}
+label {
+    margin:0;
+    padding:0;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.request-container {
+    margin:0;
+    padding:0;
+}
+
+/* Making sure the searchbox and submit button are the same height */
+.request-container .request-text-box {
+    height:30px;
+}
+.request-container .btn {
+    height:30px;
+}
+
+.request-text-box {
+    width: inherit;
+}
+
+.feed-container {
+    margin:0;
+    padding:0;
+}
+
+/* Individual feed items style */
+.feed-item {
+    border: #CCC 1px solid;
+    background-color: #EEEEEE;
+    margin:5px 0 0 0;
+    padding:0;
+}
+
+.feed-empty {
+    color: #03A9F4;
+    font-weight:bold;
+    text-align:center;
+}
+.feed-error {
+    color: #F44336;
+    font-weight:bold;
+    text-align:center;
+}
+
+.path-invalid {
+    color: #F44336;
+    font-weight:bold;
+}
+
+.status-valid {
+    color: #4CAF50;
+    font-weight:bold;
+}
+.status-invalid {
+    color: #F44336;
+    font-weight:bold;
+}
